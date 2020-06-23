@@ -1,0 +1,20 @@
+function fiboEvenSum(n) 
+{
+  const a = [1, 2];
+  for (let i = 2; i < n; i++)
+  {
+    a.lenght++;
+    a.push(a[i - 1] + a[i - 2]);
+  }
+  let sum = 0;
+  for (let j = 0; a[j] <= n; j++)
+  {
+    if (a[j] % 2 == 0)
+    {
+      sum = sum + a[j];
+    }
+  }
+  return sum;
+}
+
+fiboEvenSum(10);
